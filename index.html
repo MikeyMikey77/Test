@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Пример веб-страницы</title>
+ </head>
+ <body>
+    <button>Тестовая кнопка</button>
+    <script>
+    
+    function addEvent(selector, eventType, handler) {
+        let elements = document.querySelectorAll(selector);
+    
+        Array.prototype.forEach.call(elements, element => {
+            element.addEventListener(eventType, handler, false);
+        });
+    }
+    
+    addEvent("button", "click", event => console.log("Button.click"));
+    </script>
+ </body>
+</html>
